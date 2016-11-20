@@ -2,5 +2,8 @@ caffe:
   build: .
   volumes:
     - ".:/workspace"
+  environment: 
+    - FLASK_APP=web.py
+    - FLASK_DEBUG=1
   ports:
     - "5000:5000"
