@@ -1,0 +1,6 @@
+caffe:
+  build: .
+  volumes:
+    - ".:/workspace"
+  ports:
+    - "5000:5000"
