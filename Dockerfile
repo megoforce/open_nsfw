@@ -44,4 +44,6 @@ RUN pip install Flask
 WORKDIR /workspace
 ADD web.py /workspace
 EXPOSE 5000
+ADD nsfw_model /workspace/nsfw_model
+ADD classify_nsfw.py /workspace/classify_nsfw.py
 CMD flask run --host=0.0.0.0
