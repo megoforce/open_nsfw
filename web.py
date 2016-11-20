@@ -32,7 +32,7 @@ def hello():
                      stderr=subprocess.PIPE,
                      stdin=subprocess.PIPE)
     out,err = p.communicate()
-    json="{success:true,score:"+out.replace("NSFW score: ","").strip()+"}"
+    json="{'success':true,'score':"+out.replace("NSFW score: ","").strip()+"}"
     return json
 
 if __name__ == "__main__":
