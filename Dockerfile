@@ -43,4 +43,5 @@ RUN echo "$CAFFE_ROOT/build/lib" >> /etc/ld.so.conf.d/caffe.conf && ldconfig
 RUN pip install Flask
 WORKDIR /workspace
 ADD web.py /workspace
+EXPOSE 5000
 CMD flask run --host=0.0.0.0
